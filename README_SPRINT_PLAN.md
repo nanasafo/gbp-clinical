@@ -45,4 +45,4 @@
 We model the NHANES sample, not population estimates; survey weights not applied to model training (standard for prediction-methods papers). One sentence, cite precedent.
 
 ## Repo
-github.com/nanayawosafo/gbp-clinical  (code public at submission; NHANES is public data — full reproducibility)
+github.com/nanasafo/gbp-clinical  (code public at submission; NHANES is public data — full reproducibility)
