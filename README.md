@@ -2,22 +2,22 @@
 
 Code for two companion studies on **safe post-hoc intervention in clinical risk models**, submitted to the Machine Learning on Big Data special session at IEEE Big Data 2026.
 
-Nana Yaw A. Osafo, Ronald Doku, John Kwagyan, William M. Southerland, Danda B. Rawat — Howard University.
+Nana Yaw A. Osafo, Ronald Doku, John Kwagyan, William M. Southerland, Danda B. Rawat Howard University.
 
 ## The two papers
 
-**Paper A — "Knowing When Not to Intervene: Impact-Weighted Coherence Gating for Bias Projection in Clinical Risk Models."**
-Projection-based debiasing removes a demographic direction from a model's latent space. Prior work (our GBP-Audit, IEEE CogMI 2025) gates this on coherence κ — the angle between the bias and task directions. We show angle-only coherence **under-predicts intervention harm** (Spearman ρ = 0.45), and introduce an **impact-weighted coherence score** — alignment × signal magnitude along the bias direction, normalized by logit scale — which forecasts erasure damage at **ρ = 0.98**. High-impact directions trigger abstention rather than projection.
+**Paper A "Knowing When Not to Intervene: Impact-Weighted Coherence Gating for Bias Projection in Clinical Risk Models."**
+Projection-based debiasing removes a demographic direction from a model's latent space. Prior work (our GBP-Audit, IEEE CogMI 2025) gates this on coherence κ  the angle between the bias and task directions. We show angle-only coherence **under-predicts intervention harm** (Spearman ρ = 0.45), and introduce an **impact-weighted coherence score** alignment × signal magnitude along the bias direction, normalized by logit scale — which forecasts erasure damage at **ρ = 0.98**. High-impact directions trigger abstention rather than projection.
 
-**Paper 3 — "Beyond Abstention: Routing Recoverable from Irrecoverable Interventions in Post-Hoc Model Editing."**
-A gate's refusal admits two readings: intervention is impossible, or the edit family is too crude. We decompose abstention using closed-form diagnostics and route across five intervention families. On clinical models, **13 of 18 refused cases are recoverable** — exclusively by mean-matching translation, never by re-centered projection — while age refuses every family. A two-diagnostic rule (impact × outcome base-rate gap) predicts the three-way verdict with **87.4% accuracy**.
+**Paper 3  "Beyond Abstention: Routing Recoverable from Irrecoverable Interventions in Post-Hoc Model Editing."**
+A gate's refusal admits two readings: intervention is impossible, or the edit family is too crude. We decompose abstention using closed form diagnostics and route across five intervention families. On clinical models, **13 of 18 refused cases are recoverable**  exclusively by mean-matching translation, never by re-centered projection  while age refuses every family. A two-diagnostic rule (impact × outcome base-rate gap) predicts the three-way verdict with **87.4% accuracy**.
 
 ## Reproduce everything
 
 NHANES is public; the full pipeline runs on a laptop in ~20 minutes.
 
 ```bash
-pip install pandas pyreadstat pyarrow requests torch scikit-learn concept-erasure matplotlib scipy
+pip install pandas pyreadstat pyarrow requests torch scikit-learn concept erasure matplotlib scipy
 
 # Paper A
 python 01_nhanes_download_prep.py   # 3 NHANES cycles -> cohort (N=4,500)
