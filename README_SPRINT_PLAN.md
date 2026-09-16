@@ -37,7 +37,7 @@
 **Metrics:** AUROC, ECE (10-bin), demographic-parity gap, equalized-odds gap, per-group AUROC & ECE. Report deltas vs unedited model.
 **Headline analyses:**
   - Table 2: fairness gains vs utility cost, gated vs ungated vs INLP/LEACE
-  - Table 3: κ per (model, attribute) with policy decision — the PROTECT rows ARE the contribution
+  - Table 3: κ per (model, attribute) with policy decision the PROTECT rows ARE the contribution
   - Fig 2: subgroup calibration under full erasure vs gated (show where blind erasure hurts)
 **Seeds:** 5 seeds, report mean ± sd. Fixed splits 60/20/20.
 
