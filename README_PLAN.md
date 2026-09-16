@@ -1,4 +1,4 @@
-# Paper A — MLBD 2026 (IEEE Big Data 2026 Special Session)
+# Paper A: MLBD 2026 (IEEE Big Data 2026 Special Session)
 
 **Paper:** Knowing When Not to Intervene: Coherence-Gated Bias Projection for Clinical Risk Models
 **Authors:** Osafo, Doku, Rawat (Howard University)
