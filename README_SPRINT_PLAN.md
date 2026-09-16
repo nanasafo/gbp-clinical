@@ -17,14 +17,14 @@
 | 19–22 | Run `03_gbp_audit.py`. Core results: κ per (model, attribute); gated vs ungated vs INLP/LEACE fairness–utility table; abstained-pairs analysis. | `results/*.csv`, 2 figures |
 | 20–24 | Write into `mlbd2026_skeleton.tex` (intro/methods are pre-drafted; drop numbers in). | full draft |
 | 25–26 | Rawat + Doku review pass. | comments resolved |
-| 27–28 | Polish, PDF check (no author info? MLBD inherits Big Data single-blind → authors ON the paper), CyberChair account + upload dry run. | camera-quality PDF |
+| 27–28 | Polish, PDF check (no author info? MLBD inherits Big Data single-blind → authors ON the paper), CyberChair account + upload dry run. | camera quality PDF |
 | **29** | **Submit.** | done |
 
 ## Experiment design (frozen — don't expand mid-sprint)
 
 **Task:** predict diabetes (self-reported diagnosis OR HbA1c ≥ 6.5%) from clinical features.
 **Data:** NHANES 2017–2018 + Aug 2021–Aug 2023 cycles, adults 18+, MEC-examined.
-**Features (NO protected attributes as inputs):** BMI, waist circumference, systolic BP, total cholesterol, HDL, triglycerides (log), smoking status, age *excluded from features* — age is an audited attribute.
+**Features (NO protected attributes as inputs):** BMI, waist circumference, systolic BP, total cholesterol, HDL, triglycerides (log), smoking status, age *excluded from features*  age is an audited attribute.
   - Rationale: bias directions are learned representations of race/sex/age that leak in via correlates; that's exactly what GBP audits.
 **Audited attributes:** race/ethnicity (Black vs White non-Hispanic; Hispanic vs White NH), sex, age (≥60 vs <45).
 **Models:** logistic regression (baseline, no audit), 2-layer MLP (64,32) — audit layer = penultimate (32-d).
