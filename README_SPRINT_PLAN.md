@@ -3,8 +3,8 @@
 **Paper:** Knowing When Not to Intervene: Coherence-Gated Bias Projection for Clinical Risk Models
 **Authors:** Osafo, Doku, Rawat (Howard University)
 **Venue:** 11th Special Session on Machine Learning on Big Data (MLBD 2026), IEEE Big Data 2026, Phoenix, Dec 14–17
-**Submission:** Sept 30, 2026 (CyberChair, track "SpecialSession on Machine Learning on Big Data") — SUBMIT SEPT 29
-**Format:** 6-page short paper, IEEE 2-column. Notification Oct 31. Camera-ready Nov 14.
+**Submission:** Sept 30, 2026 (CyberChair, track "SpecialSession on Machine Learning on Big Data") SUBMIT SEPT 29
+**Format:** 6 page short paper, IEEE 2-column. Notification Oct 31. Camera-ready Nov 14.
 
 ---
 
