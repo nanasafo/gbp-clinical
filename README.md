@@ -6,10 +6,12 @@ Nana Yaw A. Osafo, Ronald Doku, John Kwagyan, William M. Southerland, Danda B. R
 
 ## The two papers
 
-**Paper A "Knowing When Not to Intervene: Impact-Weighted Coherence Gating for Bias Projection in Clinical Risk Models."**
+****"Knowing When Not to Intervene: Impact-Weighted Coherence Gating for Bias Projection in Clinical Risk Models."***
+
 Projection-based debiasing removes a demographic direction from a model's latent space. Prior work (our GBP-Audit, IEEE CogMI 2025) gates this on coherence κ  the angle between the bias and task directions. We show angle-only coherence **under-predicts intervention harm** (Spearman ρ = 0.45), and introduce an **impact-weighted coherence score** alignment × signal magnitude along the bias direction, normalized by logit scale — which forecasts erasure damage at **ρ = 0.98**. High-impact directions trigger abstention rather than projection.
 
-**Paper 3  "Beyond Abstention: Routing Recoverable from Irrecoverable Interventions in Post-Hoc Model Editing."**
+**"Beyond Abstention: Routing Recoverable from Irrecoverable Interventions in Post-Hoc Model Editing."**
+
 A gate's refusal admits two readings: intervention is impossible, or the edit family is too crude. We decompose abstention using closed form diagnostics and route across five intervention families. On clinical models, **13 of 18 refused cases are recoverable**  exclusively by mean-matching translation, never by re-centered projection  while age refuses every family. A two-diagnostic rule (impact × outcome base-rate gap) predicts the three-way verdict with **87.4% accuracy**.
 
 ## Reproduce everything
@@ -27,7 +29,7 @@ python 04_entangled_variant.py      # age-included model: kappa's failure case
 python 06_impact_gate.py            # impact-weighted coherence vs kappa as harm forecast
 python 05_fig_dose_response.py      # Figure: kappa-vs-impact comparison
 
-# Paper 3 (reuses Paper A's activations)
+# Paper B (reuses Paper A's activations)
 python 07_synthetic_testbed.py      # 75 cases with ground-truth entanglement control
 python 09_routing_eval.py           # diagnostics -> 5 families x 4 severities -> verdict per case
 python 10_baserate_diag.py          # base-rate gap diagnostic + 2x2 routing rule accuracy
@@ -35,7 +37,7 @@ python 11_fig_verdict_map.py        # Figure: verdict map on the two-diagnostic 
 ```
 
 `08_families.py` is a library (diagnostics + intervention families), imported by `09`.
-Outputs land in `results/` (Paper A) and `results3/` (Paper 3). The `data/` and `data_syn/` directories are not committed — scripts 01 and 07 rebuild them.
+Outputs land in `results/` (Paper A) and `results3/` (Paper B). The `data/` and `data_syn/` directories are not committed — scripts 01 and 07 rebuild them.
 
 ## Data
 
