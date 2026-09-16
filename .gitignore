@@ -4,3 +4,11 @@ __pycache__/
 *.pyc
 gbp-env/
 nhanse_data
+
+data_syn/
+*.tex
+*.aux
+*.log
+*.out
+*.synctex.gz
+README_PAPER3_PLAN.md
