@@ -1,12 +1,15 @@
 data/
+data_syn/
 models/
 __pycache__/
 *.pyc
 gbp-env/
 nhanse_data
-
-data_syn/
+.ipynb_checkpoints/
+.DS_Store
 *.tex
+!build/*.tex
+!results/*.tex
 *.aux
 *.log
 *.out
